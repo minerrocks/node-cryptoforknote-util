@@ -156,7 +156,7 @@ namespace cryptonote
 
     BEGIN_SERIALIZE()
       VARINT_FIELD(version)
-      if (blob_type == BLOB_TYPE_CRYPTONOTE_LOKI)
+      if (blob_type == BLOB_TYPE_CRYPTONOTE_LOKI && version > 2)
       {
         FIELD(output_unlock_times)
         FIELD(is_deregister)
